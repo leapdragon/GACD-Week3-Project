@@ -48,7 +48,7 @@ varnames$V2 <- as.character( varnames$V2 )
 
 # Extract only the columns for means and standard deviations
 
-varnames.selected <- varnames[ grep( "mean\\(\\)|std\\(\\)", varnames $V2), ]
+varnames.selected <- varnames[ grep( "mean\\(\\)|std\\(\\)", varnames$V2), ]
 varnames.selected$V2 <- as.character( varnames.selected$V2 )
 
 # Now, loop through the activities list and set the values in the combined data frame according to the list
