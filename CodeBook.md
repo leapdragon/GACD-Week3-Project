@@ -21,6 +21,7 @@ The script requires the following in order to run and complete successfully:
 
 1. Data set downloaded and unzipped into a single directory preserving the structure in the original ZIP file
 2. Current working directory in R set to this directory
+3. "plyr" and "reshape2" libraries installed and available for loading via library()
 
 **Output Generated**
 
