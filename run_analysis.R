@@ -68,10 +68,16 @@ for( c_index in 1:nrow( varnames.selected ) ) {
 	# We rename the columns as we add them, modifying names from features.txt to make them more "R-friendly"
 
 	newname <- varnames.selected$V2[ c_index ]
-	newname <- gsub( "std", "Std", newname )
+	newname <- gsub( "std", "StdDeviation", newname )
 	newname <- gsub( "mean", "Mean", newname )
 	newname <- gsub( "-", "", newname )
 	newname <- gsub( "\\(\\)", "", newname )
+	newname <- gsub( "Acc", "Acceleration", newname )
+	newname <- gsub( "Gyro", "Gyroscope", newname )
+	newname <- gsub( "tBody", "TimeBody", newname )
+	newname <- gsub( "fBody", "FrequencyBody", newname )
+	newname <- gsub( "Mag", "Magnitude", newname )
+	newname <- gsub( "tGravity", "TimeGravity", newname )
 	colnames( data.new )[ c_index + 2 ] <- newname
 }
 
