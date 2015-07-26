@@ -35,7 +35,7 @@ This is the final "TIDY" dataset (required in "Step 5") showing the MEAN value o
 
 - **"Subject" (column 1):** The unique subject (identified by an integer) that generated the data
 - **"Activity" (column 2):** The activity in which the subject was engaged for the supplied variable, using the human-readable values in activity_labels.txt (in original ZIP)
-- **"Variable" (column 3):** The variable for which the mean has been calculated (refer to variable names above for mappings to features.txt)
+- **"Variable" (column 3):** The variable for which the mean has been calculated (refer to variable names below for meanings and mappings to features.txt)
 - **"MeanValue" (column 4):** The mean value for all measurements in the test and train datasets for this subject, activity, and variable (note that in some cases, this means that the value is a mean of means, e.g. for TimeBodyAccelerationMeanX, this value is the mean of *each* of potentially many TimeBodyAccelerationMeanX values for a given subject and activity)
 
 The file is sorted first by subject and then by activity.
