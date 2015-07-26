@@ -40,7 +40,7 @@ This is the final "TIDY" dataset showing the MEAN value of all MEAN or STANDARD 
 
 The file is sorted first by subject and then by activity.
 
-THE MEANINGS OF EACH VARIABLE ARE OUTLINED BELOW.
+THE MEANINGS OF EACH VARIABLE ARE OUTLINED BELOW. NOTE THAT ALL INPUT DATA IS NORMALIZED WITH RANGE [-1,1] MEANING THAT THEY ARE UNITLESS:
 
 Variable Name | Original Variable (features.txt) | Description 
 ------------- | ------------- | ------------- 
