@@ -29,15 +29,18 @@ The script creates two files upon exit:
 1. Mean_and_Std_Complete.txt — The combined dataset, with human-readable labels affixed
 2. Mean_and_Std_Summary.txt — The summary dataset, showing mean values for each combination of subject, activity, and variable
 
-## Data Format: Mean_and_Std_Complete.txt
+## Data Format: Mean_and_Std_Summary.txt
 
-This file has the following columns:
+This is the final "TIDY" dataset showing the MEAN value of all MEAN or STANDARD DEVIATION measurements for a given subject, activity, and variable. It has the following columns:
 
 - **"Subject" (column 1):** The unique subject (identified by an integer) that generated the data
-- **"Activity" (column 2):** The name of the activity in which the subject was engaged, using the human-readable values in activity_labels.txt (in original ZIP)
-- **Variables (columns 3-66):** Mean and standard deviation data subsetted from the variables outlined in features.txt (in original ZIP)
+- **"Activity" (column 2):** The activity in which the subject was engaged for the supplied variable, using the human-readable values in activity_labels.txt (in original ZIP)
+- **"Variable" (column 3):** The variable for which the mean has been calculated (refer to variable names above for mappings to features.txt)
+- **"MeanValue" (column 4):** The mean value for all measurements in the test and train datasets for this subject, activity, and variable (note that in some cases, this means that the value is a mean of means, e.g. for TimeBodyAccelerationMeanX, this value is the mean of *each* of potentially many TimeBodyAccelerationMeanX values for a given subject and activity)
 
-The variables in columns 3-66 share the following mappings to variables outlined in features.txt, as well as the following meanings (NOTE that all values are normalized to a range of [-1, 1] and are thus unitless):
+The file is sorted first by subject and then by activity.
+
+THE MEANINGS OF EACH VARIABLE ARE OUTLINED BELOW.
 
 Variable Name | Original Variable (features.txt) | Description 
 ------------- | ------------- | ------------- 
@@ -108,17 +111,13 @@ FrequencyBodyBodyGyroscopeMagnitudeStdDeviation | fBodyBodyGyroMag-std() | Body 
 FrequencyBodyBodyGyroscopeJerkMagnitudeMean | fBodyBodyGyroJerkMag-mean() | Body Body Gyroscope Jerk Magnitude Mean (Frequency Domain)
 FrequencyBodyBodyGyroscopeJerkMagnitudeStdDeviation | fBodyBodyGyroJerkMag-std() | Body Body Gyroscope Jerk Magnitude Standard Deviation (Frequency Domain)
 
+## Data Format: Mean_and_Std_Complete.txt
 
-## Data Format: Mean_and_Std_Summary.txt
-
-This file has the following columns:
+This intermediate file is the raw data before means are calculated for each subject, activity, and variable. It has the following columns:
 
 - **"Subject" (column 1):** The unique subject (identified by an integer) that generated the data
-- **"Activity" (column 2):** The activity in which the subject was engaged for the supplied variable, using the human-readable values in activity_labels.txt (in original ZIP)
-- **"Variable" (column 3):** The variable for which the mean has been calculated (refer to variable names above for mappings to features.txt)
-- **"MeanValue" (column 4):** The mean value for all measurements in the test and train datasets for this subject, activity, and variable
-
-The file is sorted first by subject and then by activity.
+- **"Activity" (column 2):** The name of the activity in which the subject was engaged, using the human-readable values in activity_labels.txt (in original ZIP)
+- **Variables (columns 3-66):** Mean and standard deviation data subsetted from the variables outlined in features.txt (in original ZIP), named and with meanings as outlined above.
 
 ## Data Manipulations Performed
 
