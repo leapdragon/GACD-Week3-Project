@@ -13,7 +13,7 @@ The manipulations in question are:
 3. Creating textual labels for activities represented
 4. Adding column names for the preserved data in the combined dataset
 5. Creating a secondary dataset that summarizes the data (as a mean) on a per-subject, per-activity, per-variable basis
-6. Outputting both the combined dataset and the secondary dataset in a tidy format with labels preserved and a space separator
+6. Outputting both the combined dataset and the final required dataset ("Step 5") in a tidy format with labels preserved and a space separator
 
 **Input/Execution Conditions**
 
@@ -26,12 +26,12 @@ The script requires the following in order to run and complete successfully:
 
 The script creates two files upon exit:
 
-1. Mean_and_Std_Complete.txt — The combined dataset, with human-readable labels affixed
-2. Mean_and_Std_Summary.txt — The summary dataset, showing mean values for each combination of subject, activity, and variable
+1. Mean_and_Std_Summary.txt — The final tiday dataset of means, showing mean values for each combination of subject, activity, and variable
+2. Mean_and_Std_Complete.txt — The intermediate (combined) dataset, with human-readable labels affixed
 
 ## Data Format: Mean_and_Std_Summary.txt
 
-This is the final "TIDY" dataset showing the MEAN value of all MEAN or STANDARD DEVIATION measurements for a given subject, activity, and variable. It has the following columns:
+This is the final "TIDY" dataset (required in "Step 5") showing the MEAN value of all MEAN or STANDARD DEVIATION measurements for a given subject, activity, and variable. It has the following columns:
 
 - **"Subject" (column 1):** The unique subject (identified by an integer) that generated the data
 - **"Activity" (column 2):** The activity in which the subject was engaged for the supplied variable, using the human-readable values in activity_labels.txt (in original ZIP)
