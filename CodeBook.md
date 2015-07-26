@@ -135,7 +135,7 @@ This section describes the operation(s) performed in order to arrive at the outp
 7. Data column meanings in the raw data sets are read from "features.txt"
 8. A subset of these columns is identified by matching the meanings in "features.txt" with the text strings "mean()" and "std()" (indicating means and standard deviations, respectively).
 9. The "Subject," "Activity," and identified mean and standard deviation columns are used to compose a new data frame containing just subjects, activities, and mean and standard deviation data.
-10. More "R-Friendly" column names are created from these strings by replacing "-" and "()" characters, then assigned to their respective columns.
+10. More "R-Friendly" column names are created from these strings by removing "-" and "()" characters, and by substituting longer words for abbreviations, then assigned to their respective columns.
 11. The data is written with column names, without row names, and using space (" ") as a field separator to: ./Mean_and_Std_Complete.txt.
 
 **Mean_and_Std_Summary.txt**
