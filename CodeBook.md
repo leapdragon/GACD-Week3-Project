@@ -27,7 +27,7 @@ The script requires the following in order to run and complete successfully:
 
 The script creates two files upon exit:
 
-1. Mean_and_Std_Summary.txt — The final tiday dataset of means, showing mean values for each combination of subject, activity, and variable
+1. Mean_and_Std_Summary.txt — The final tidy dataset of means, showing mean values for each combination of subject, activity, and variable
 2. Mean_and_Std_Complete.txt — The intermediate (combined) dataset, with human-readable labels affixed
 
 ## Data Format: Mean_and_Std_Summary.txt
